@@ -189,11 +189,11 @@ Adicionar o host B e host C.
 
 Pegar o seu comando no seu rancher.
 ```sh
-$ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-1
+$ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token cdz5smzrqm4pz2zhq56ch4qs8qf9xvqs8nwsr4lzsr4k7psvtq4vvb --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --node-name k8s-1 --etcd --controlplane --worker
 
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-2
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token cdz5smzrqm4pz2zhq56ch4qs8qf9xvqs8nwsr4lzsr4k7psvtq4vvb --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --node-name k8s-2 --etcd --controlplane --worker
 
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-3
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token cdz5smzrqm4pz2zhq56ch4qs8qf9xvqs8nwsr4lzsr4k7psvtq4vvb --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --node-name k8s-8 --etcd --controlplane --worker
 ```
 Será um cluster com 3 nós.
 Navegar pelo Rancher e ver os painéis e funcionalidades.
