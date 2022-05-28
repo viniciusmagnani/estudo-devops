@@ -189,7 +189,11 @@ Adicionar o host B e host C.
 
 Pegar o seu comando no seu rancher.
 ```sh
-$ docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://rancher.dev-ops-ninja.com --token 8xf5r2ttrvvqcxdhwsbx9cvb7s9wgwdmgfbmzr4mt7smjbg4jgj292 --ca-checksum 61ac25d1c389b26c5c9acd98a1c167dbfb394c6c1c3019d855901704d8bae282 --node-name k8s-1 --etcd --controlplane --worker
+$ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-1
+
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-2
+
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:v2.4.3 --server https://192.168.14.35 --token qgfcsmb7b99v5gcplbcz4kj6jdblpssfml7bs2mfw8qzr2jw48jpbj --ca-checksum d60331cc5c58e1b1e466a4372aa035aab7308a163f80c47eedd6fcf7af686e96 --etcd --controlplane --worker --node-name k8s-3
 ```
 Será um cluster com 3 nós.
 Navegar pelo Rancher e ver os painéis e funcionalidades.
