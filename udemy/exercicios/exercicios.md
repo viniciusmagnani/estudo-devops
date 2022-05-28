@@ -28,12 +28,6 @@ $ sudo apt install docker.io
 $ usermod -aG docker ubuntu
 ```
 
-sudo su
-sudo apt install docker.io
-usermod -aG docker ubuntu
-
-
-
 # Aula 5 - Construindo sua aplicação
 
 ### Fazer build das imagens, rodar docker-compose.
